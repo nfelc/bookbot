@@ -5,9 +5,11 @@ def main():
     letters = letter_count(text)
     listed_letters = dict_to_list(letters)
     listed_letters.sort(reverse=True, key=sort_on)    
+
     print(f"--- begin report of {book_path}---")
     print(f"{words} words found in the document")
     print()
+    
     for letter in listed_letters:
         print(f"The '{letter["char"]}' character was found {letter["num"]} times")
     print("---end report---")
